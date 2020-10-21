@@ -1,5 +1,6 @@
-package com.sapient.football.team.response;
+package com.sapient.football.team.model;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -13,26 +14,21 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class FootballTeamRankingResponse {
-
+public class Competitions {
+	
 	@JsonProperty("countryId")
+	@JsonAlias("country_id")
 	private String countryId;
 	
 	@JsonProperty("countryName")
+	@JsonAlias("country_name")
 	private String countryName;
 	
 	@JsonProperty("leagueId")
+	@JsonAlias("league_id")
 	private String leagueId;
 	
 	@JsonProperty("leagueName")
+	@JsonAlias("league_name")
 	private String leagueName;
-	
-	@JsonProperty("teamId")
-	private String teamId;
-	
-	@JsonProperty("teamName")
-	private String teamName;
-	
-	@JsonProperty("overallLeaguePosition")
-	private String overallLeaguePosition;
 }
